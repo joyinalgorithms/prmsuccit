@@ -1,0 +1,33 @@
+Image Placeholders Needed:
+
+1. ccit-building.jpg - Main CCIT building exterior (hero background)
+2. ccit-logo.png - College logo for navigation
+3. favicon.ico - Website favicon
+4. video-poster.jpg - Poster image for campus tour video
+5. cs-department.jpg - Computer Science department image
+6. it-department.jpg - Information Technology department image
+7. cs-lab.jpg - Computer Science laboratory
+8. it-lab.jpg - Information Technology laboratory
+
+Faculty Images:
+9. dean.jpg - Dean photo
+10. cs_chair.jpg - CS Program Chair photo
+11. it_chair.jpg - IT Program Chair photo
+12. cs1.jpg through cs4.jpg - CS faculty photos
+13. it1.jpg through it4.jpg - IT faculty photos
+
+News Images:
+14. news1.jpg - Programming competition news
+15. news2.jpg - AI research lab news
+16. news3.jpg - Industry partnership news
+
+Video:
+17. campus-tour.mp4 - Campus tour video
+
+All images should be optimized for web (compressed, appropriate dimensions)
+Recommended sizes:
+- Hero background: 1920x1080px
+- Department images: 800x600px
+- Faculty photos: 400x400px (square)
+- News images: 600x400px
+- Logo: 200x200px (transparent background)

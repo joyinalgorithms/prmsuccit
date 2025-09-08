@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title animate-fade-in">Our Faculty</h1>
+        <p class="page-subtitle animate-fade-in-delay">Meet our distinguished educators and researchers</p>
+    </div>
+</section>
+
+<section class="faculty-content">
+    <div class="container">
+        <!-- Dean Section -->
+        <div class="leadership-section">
+            <h2 class="section-title">College Leadership</h2>
+            <div class="dean-card animate-on-scroll">
+                <div class="faculty-image">
+                    <img src="{{ faculty.dean.image }}" alt="{{ faculty.dean.name }}" loading="lazy">
+                </div>
+                <div class="faculty-info">
+                    <h3>{{ faculty.dean.name }}</h3>
+                    <p class="faculty-position">{{ faculty.dean.position }}</p>
+                    <p class="faculty-department">{{ faculty.dean.department }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Program Chairs -->
+        <div class="chairs-section">
+            <h2 class="section-title">Program Chairs</h2>
+            <div class="chairs-grid">
+                <div class="chair-card animate-on-scroll">
+                    <div class="faculty-image">
+                        <img src="{{ faculty.cs_chair.image }}" alt="{{ faculty.cs_chair.name }}" loading="lazy">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>{{ faculty.cs_chair.name }}</h3>
+                        <p class="faculty-position">{{ faculty.cs_chair.position }}</p>
+                        <p class="faculty-department">{{ faculty.cs_chair.department }}</p>
+                    </div>
+                </div>
+                
+                <div class="chair-card animate-on-scroll">
+                    <div class="faculty-image">
+                        <img src="{{ faculty.it_chair.image }}" alt="{{ faculty.it_chair.name }}" loading="lazy">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>{{ faculty.it_chair.name }}</h3>
+                        <p class="faculty-position">{{ faculty.it_chair.position }}</p>
+                        <p class="faculty-department">{{ faculty.it_chair.department }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Computer Science Faculty -->
+        <div class="department-faculty">
+            <h2 class="section-title">Computer Science Faculty</h2>
+            <div class="faculty-grid">
+                {% for member in faculty.cs_faculty %}
+                <div class="faculty-card animate-on-scroll">
+                    <div class="faculty-image">
+                        <img src="{{ member.image }}" alt="{{ member.name }}" loading="lazy">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>{{ member.name }}</h3>
+                        <p class="faculty-department">Computer Science</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Information Technology Faculty -->
+        <div class="department-faculty">
+            <h2 class="section-title">Information Technology Faculty</h2>
+            <div class="faculty-grid">
+                {% for member in faculty.it_faculty %}
+                <div class="faculty-card animate-on-scroll">
+                    <div class="faculty-image">
+                        <img src="{{ member.image }}" alt="{{ member.name }}" loading="lazy">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>{{ member.name }}</h3>
+                        <p class="faculty-department">Information Technology</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

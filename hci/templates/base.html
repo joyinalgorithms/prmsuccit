@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ meta.description }}">
+    <meta name="keywords" content="{{ meta.keywords }}">
+    <meta name="author" content="CCIT">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="{{ meta.title }}">
+    <meta property="og:description" content="{{ meta.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.url }}">
+
+    <title>{{ meta.title }}</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="{{ url_for('static', filename='css/style.css') }}" as="style">
+    <link rel="preload" href="{{ url_for('static', filename='js/main.js') }}" as="script">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="{{ url_for('static', filename='images/ccitlogo.jpg') }}" alt="CCIT Logo" class="logo-img">
+                <span class="logo-text">CCIT</span>
+            </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+                <a href="{{ url_for('about') }}" class="nav-link">About</a>
+                <a href="{{ url_for('faculty') }}" class="nav-link">Faculty</a>
+                <a href="{{ url_for('organizations') }}" class="nav-link">Organizations</a>
+                <a href="{{ url_for('news') }}" class="nav-link">News</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Departments <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="{{ url_for('computer_science') }}" class="dropdown-link">Computer Science</a>
+                        <a href="{{ url_for('information_technology') }}" class="dropdown-link">Information Technology</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>CCIT</h3>
+                <p>College of Communication and Information Technology</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('faculty') }}">Faculty</a></li>
+                    <li><a href="{{ url_for('organizations') }}">Student Organizations</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Departments</h4>
+                <ul>
+                    <li><a href="{{ url_for('computer_science') }}">Computer Science</a></li>
+                    <li><a href="{{ url_for('information_technology') }}">Information Technology</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-map-marker-alt"></i> President Ramon Magsaysay State University, College of Communication Information Technology</p>
+                <p><i class="fas fa-phone"></i></p>
+                <p><i class="fas fa-envelope"></i> info@ccit.edu</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 CCIT. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="{{ url_for('terms') }}">Terms of Service</a>
+                <a href="{{ url_for('privacy') }}">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">CCIT</div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-header department-header it-header">
+    <div class="container">
+        <h1 class="page-title animate-fade-in">Information Technology Department</h1>
+        <p class="page-subtitle animate-fade-in-delay">Bridging technology and business through innovative IT solutions</p>
+    </div>
+</section>
+
+<section class="department-content">
+    <div class="container">
+        <div class="department-overview">
+            <div class="overview-text animate-on-scroll">
+                <h2>About Information Technology</h2>
+                <p>Our Information Technology program focuses on the practical application of technology in business environments. Students learn network administration, database management, system integration, project management, and enterprise solutions.</p>
+            </div>
+            <div class="overview-image animate-on-scroll">
+                <img src="{{ url_for('static', filename='images/it-lab.png') }}" alt="IT Laboratory">
+            </div>
+        </div>
+
+        <div class="curriculum-section">
+            <h2 class="section-title">Curriculum Highlights</h2>
+            <div class="curriculum-grid">
+                <div class="curriculum-card animate-on-scroll">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Network Administration</h3>
+                    <p>Design, implement, and manage enterprise network infrastructures</p>
+                </div>
+                <div class="curriculum-card animate-on-scroll">
+                    <i class="fas fa-server"></i>
+                    <h3>System Administration</h3>
+                    <p>Manage servers, cloud platforms, and enterprise systems</p>
+                </div>
+                <div class="curriculum-card animate-on-scroll">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Project Management</h3>
+                    <p>Lead IT projects using industry-standard methodologies</p>
+                </div>
+                <div class="curriculum-card animate-on-scroll">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud Computing</h3>
+                    <p>Deploy and manage cloud-based solutions and services</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="career-section">
+            <h2 class="section-title">Career Opportunities</h2>
+            <div class="career-list">
+                <div class="career-item animate-on-scroll">IT Manager</div>
+                <div class="career-item animate-on-scroll">Network Administrator</div>
+                <div class="career-item animate-on-scroll">Systems Analyst</div>
+                <div class="career-item animate-on-scroll">Cloud Architect</div>
+                <div class="career-item animate-on-scroll">IT Consultant</div>
+                <div class="career-item animate-on-scroll">Project Manager</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
