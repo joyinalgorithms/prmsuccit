@@ -1,100 +1,138 @@
 {% extends "base.html" %}
 
+{% block description %}Learn about CCIT's vision, mission, and goals. Discover our commitment to excellence in computer science and information technology education.{% endblock %}
+
 {% block content %}
-    <section class="page-header">
-        <div class="container">
-            <h1 class="page-title animate-fade-in">About CCIT</h1>
-            <p class="page-subtitle animate-fade-in-delay">Learn about our vision, mission, and commitment to excellence</p>
-        </div>
-    </section>
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title">About CCIT</h1>
+        <p class="page-subtitle">Shaping the future of technology education</p>
+    </div>
+</section>
 
-    <section class="about-content">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-card animate-on-scroll">
-                    <div class="card-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h2>Our Vision</h2>
-                    <p>PRMSU shall be a premier learner-centered and proactive university in a digital and global society.</p>
-                </div>
-
-                <div class="about-card animate-on-scroll">
-                    <div class="card-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h2>Our Mission</h2>
-                    <p>The PRMSU shall primarily provide advance and higher proteesional technical, and special instructions in various disciplines; undertake research, extension and income generation program for the sustainable development of Zambales, the region, and the country.</p>
-                </div>
-                <div class="about-card animate-on-scroll">
-                    <div class="card-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h2>Quality Policy</h2>
-                    <p>The President Ramon Magsaysay State University is committed to continually strive for excellence in instruction, research, extension and production
-                        to strengthen global competitiveness adhering to quality standard for the utmost satisfaction of its valued
-                        customers</p>
-                </div>
-                <div class="about-card animate-on-scroll">
-                    <div class="card-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h2>Program Objectives - Bachelor of Science in Computer Science</h2>
-                    The Bachelor of Science in Computer Science aims to:
-                    <ol>
-                        <li>
-                            Prepare graduates to be equipped with the principles and theories of computing leading to the conduct of research and advanced studies;
-                        </li>
-                        <li>
-                            Develop globally competitive and well- rounded CS professionals and researchers, proficient in designing and developing computing solutions; and
-                        </li>
-                        <li>
-                            Produce morally upright leaders in the fast-changing ICT industry.
-                        </li>
-                    </ol>
-                </div>
-                <div class="about-card animate-on-scroll">
-                    <div class="card-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h2>Program Objectives - Bachelor of Science in Information Technology</h2>
-                    The Bachelor of Science in Information Technology aims to:
-                    <ol>
-                        <li>
-                            Prepare graduates to be equipped with the principles and theories of computing leading to design and develop technological solutions for the industry, government and academe;
-                        </li>
-                        <li>
-                            Develop globally competitive and well- rounded IT professionals for business solutions through innovations in the global digital community; and
-                        </li>
-                        <li>
-                            Produce ethically responsible leaders in the management of computing technologies.
-                        </li>
-                    </ol> </div>
+<section class="about-content">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2 class="section-title">Our Story</h2>
+                <p>The College of Communication and Information Technology (CCIT) is a component of the multi-campus PRMSU system, serving as a prominent center for technology-related programs</p>
+                <p>Our commitment to excellence, innovation, and student success has made us a leading institution in computer science and information technology education.</p>
+            </div>
+            <div class="about-image">
+                <img src="/static/images/ccitbuilding.jpg" alt="CCIT Campus" class="responsive-image">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="values-section">
-        <div class="container">
-            <h2 class="section-title">Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-item animate-on-scroll">
-                    <h3>Excellence</h3>
-                    <p>Striving for the highest standards in education, research, and service</p>
+<section class="vision-mission">
+    <div class="container">
+        <div class="vm-grid">
+            <div class="vm-card">
+                <h3 class="vm-title">Vision</h3>
+                <div class="vm-content">
+                    <img src="/static/images/vision.jpg" alt="Our Vision" class="vm-image">
+                    <p>To be the premier institution for computer science and information technology education, recognized globally for innovation, research excellence, and producing industry-ready graduates who shape the future of technology.</p>
                 </div>
-                <div class="value-item animate-on-scroll">
-                    <h3>Innovation</h3>
-                    <p>Embracing creativity and technological advancement in all our endeavors</p>
-                </div>
-                <div class="value-item animate-on-scroll">
-                    <h3>Integrity</h3>
-                    <p>Maintaining ethical standards and transparency in all our operations</p>
-                </div>
-                <div class="value-item animate-on-scroll">
-                    <h3>Collaboration</h3>
-                    <p>Fostering teamwork and partnerships within and beyond our institution</p>
+            </div>
+            
+            <div class="vm-card">
+                <h3 class="vm-title">Mission</h3>
+                <div class="vm-content">
+                    <img src="/static/images/mission.jpg" alt="Our Mission" class="vm-image">
+                    <p>To provide world-class education in computer science and information technology through innovative teaching methods, cutting-edge research, industry partnerships, and fostering a culture of continuous learning and ethical practice.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+<!--
+<section class="goals">
+    <div class="container">
+        <h2 class="section-title">College Goals</h2>
+        <div class="goals-grid">
+            <div class="goal-item">
+                <div class="goal-number">01</div>
+                <div class="goal-content">
+                    <h3>Academic Excellence</h3>
+                    <p>Maintain the highest standards of education and continuously update curricula to reflect industry trends and technological advancements.</p>
+                </div>
+            </div>
+            
+            <div class="goal-item">
+                <div class="goal-number">02</div>
+                <div class="goal-content">
+                    <h3>Research Innovation</h3>
+                    <p>Foster groundbreaking research in emerging technologies and encourage faculty-student collaboration in research projects.</p>
+                </div>
+            </div>
+            
+            <div class="goal-item">
+                <div class="goal-number">03</div>
+                <div class="goal-content">
+                    <h3>Industry Partnership</h3>
+                    <p>Build strong relationships with leading technology companies to provide internships, job opportunities, and real-world project experiences.</p>
+                </div>
+            </div>
+            
+            <div class="goal-item">
+                <div class="goal-number">04</div>
+                <div class="goal-content">
+                    <h3>Global Impact</h3>
+                    <p>Prepare graduates to make meaningful contributions to the global technology community and address societal challenges through technology.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+<section class="program-objectives">
+    <div class="container">
+        <h2 class="section-title">Program Objectives</h2>
+        
+        <div class="objectives-container">
+            <!-- CS Objectives -->
+            <div class="objective-section">
+                <h3 class="objective-title">
+                    <i class="fas fa-code"></i>
+                    Bachelor of Science in Computer Science
+                </h3>
+                <p style="color: white">The Bachelor of Science in Computer Science aims to:</p>
+                <ul class="objectives-list">
+                    <li>
+                        Prepare graduates to be equipped with the principles and theories of computing leading to the conduct of research and advanced studies;
+                    </li>
+                    <li>
+                        Develop globally competitive and well-rounded CS professionals and researchers, proficient in designing and developing computing solutions; and
+                    </li>
+                    <li>
+                        Produce morally upright leaders in the fast-changing ICT industry.
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- IT Objectives -->
+            <div class="objective-section">
+                <h3 class="objective-title">
+                    <i class="fas fa-server"></i>
+                    Bachelor of Science in Information Technology
+                </h3>
+                <p style="color: white">The Bachelor of Science in Information Technology aims to:</p>
+                <ul class="objectives-list">
+                    <li>
+                        Prepare graduates to be equipped with the principles and theories of computing leading to design and develop technological solutions for the industry, government and academe;
+                    </li>
+                    <li>
+                        Develop globally competitive and well-rounded IT professionals for business solutions through innovations in the global digital community; and
+                    </li>
+                    <li>
+                        Produce ethically responsible leaders in the management of computing technologies.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 {% endblock %}

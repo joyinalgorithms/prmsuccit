@@ -1,0 +1,460 @@
+{% extends "base.html" %}
+
+{% block description %}Interactive coding guide for beginners - Learn programming fundamentals with hands-on exercises and real-time feedback{% endblock %}
+
+{% block content %}
+<section class="coding-hero">
+    <div class="container">
+        <div class="coding-hero-content">
+            <h1 class="coding-title">
+                <span class="gradient-text">Start Your Coding Journey</span>
+                <br>Interactive & Fun!
+            </h1>
+            <p class="coding-subtitle">
+                Learn programming fundamentals through interactive exercises and real-time feedback. No experience required!
+            </p>
+            <div class="coding-stats">
+                <div class="coding-stat">
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label">Students Learned</span>
+                </div>
+                <div class="coding-stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Interactive Lessons</span>
+                </div>
+                <div class="coding-stat">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Programming Languages</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="coding-playground">
+    <div class="container">
+        <div class="playground-header">
+            <h2 class="section-title">Try It Now - Interactive Code Editor</h2>
+            <p class="section-subtitle">Write your first program and see it run instantly!</p>
+        </div>
+        
+        <div class="coding-interface">
+            <div class="language-selector">
+                <button class="lang-btn active" onclick="switchLanguage('javascript')">
+                    <i class="fab fa-js-square"></i> JavaScript
+                </button>
+                <button class="lang-btn" onclick="switchLanguage('python')">
+                    <i class="fab fa-python"></i> Python
+                </button>
+                <button class="lang-btn" onclick="switchLanguage('html')">
+                    <i class="fab fa-html5"></i> HTML/CSS
+                </button>
+            </div>
+            
+            <div class="code-editor-container">
+                <div class="editor-panel">
+                    <div class="editor-header">
+                        <span class="editor-title">Code Editor</span>
+                        <div class="editor-controls">
+                            <button class="control-btn" onclick="runCode()">
+                                <i class="fas fa-play"></i> Run
+                            </button>
+                            <button class="control-btn" onclick="resetCode()">
+                                <i class="fas fa-undo"></i> Reset
+                            </button>
+                        </div>
+                    </div>
+                    <textarea id="code-editor" class="code-textarea" placeholder="Write your code here...">// Welcome to CCIT Interactive Coding!
+// Try changing this message and click Run
+console.log("Hello, Future Developer! 🚀");
+
+// Let's create a simple function
+function greetStudent(name) {
+    return `Welcome to CCIT, ${name}!`;
+}
+
+// Call the function
+console.log(greetStudent("Your Name"));
+</textarea>
+                </div>
+                
+                <div class="output-panel">
+                    <div class="output-header">
+                        <span class="output-title">Output</span>
+                        <button class="control-btn" onclick="clearOutput()">
+                            <i class="fas fa-trash"></i> Clear
+                        </button>
+                    </div>
+                    <div id="code-output" class="code-output">
+                        <div class="output-placeholder">
+                            <i class="fas fa-terminal"></i>
+                            <p>Click "Run" to see your code output here!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="coding-lessons">
+    <div class="container">
+        <h2 class="section-title">Interactive Lessons</h2>
+        <div class="lessons-grid">
+            <div class="lesson-card" onclick="loadLesson('variables')">
+                <div class="lesson-icon">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <h3 class="lesson-title">Variables & Data Types</h3>
+                <p class="lesson-description">Learn how to store and manipulate data in your programs</p>
+                <div class="lesson-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <span class="progress-text">Start Learning</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card" onclick="loadLesson('functions')">
+                <div class="lesson-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3 class="lesson-title">Functions</h3>
+                <p class="lesson-description">Create reusable blocks of code to solve problems efficiently</p>
+                <div class="lesson-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <span class="progress-text">Start Learning</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card" onclick="loadLesson('loops')">
+                <div class="lesson-icon">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <h3 class="lesson-title">Loops & Iteration</h3>
+                <p class="lesson-description">Automate repetitive tasks with powerful loop structures</p>
+                <div class="lesson-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <span class="progress-text">Start Learning</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card" onclick="loadLesson('arrays')">
+                <div class="lesson-icon">
+                    <i class="fas fa-list"></i>
+                </div>
+                <h3 class="lesson-title">Arrays & Objects</h3>
+                <p class="lesson-description">Organize and structure your data for complex applications</p>
+                <div class="lesson-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <span class="progress-text">Start Learning</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card" onclick="loadLesson('dom')">
+                <div class="lesson-icon">
+                    <i class="fas fa-window-maximize"></i>
+                </div>
+                <h3 class="lesson-title">Web Interaction</h3>
+                <p class="lesson-description">Make websites interactive with DOM manipulation</p>
+                <div class="lesson-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <span class="progress-text">Start Learning</span>
+                </div>
+            </div>
+            
+            <div class="lesson-card" onclick="loadLesson('projects')">
+                <div class="lesson-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3 class="lesson-title">Build Projects</h3>
+                <p class="lesson-description">Apply your skills to create real-world applications</p>
+                <div class="lesson-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <span class="progress-text">Start Learning</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="coding-challenge">
+    <div class="container">
+        <div class="challenge-content">
+            <h2 class="section-title">Daily Coding Challenge</h2>
+            <div class="challenge-card">
+                <div class="challenge-header">
+                    <h3 class="challenge-title">Challenge #42: FizzBuzz</h3>
+                    <span class="challenge-difficulty">Beginner</span>
+                </div>
+                <p class="challenge-description">
+                    Write a program that prints numbers from 1 to 100. For multiples of 3, print "Fizz" instead of the number. 
+                    For multiples of 5, print "Buzz". For multiples of both 3 and 5, print "FizzBuzz".
+                </p>
+                <div class="challenge-actions">
+                    <button class="btn btn-primary" onclick="loadChallenge()">Try Challenge</button>
+                    <button class="btn btn-secondary" onclick="showHint()">Need a Hint?</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+const codeTemplates = {
+    javascript: `// Welcome to CCIT Interactive Coding!
+// Try changing this message and click Run
+console.log("Hello, Future Developer! 🚀");
+
+// Let's create a simple function
+function greetStudent(name) {
+    return \`Welcome to CCIT, \${name}!\`;
+}
+
+// Call the function
+console.log(greetStudent("Your Name"));`,
+    
+    python: `# Welcome to CCIT Interactive Coding!
+# Try changing this message and click Run
+print("Hello, Future Developer! 🚀")
+
+# Let's create a simple function
+def greet_student(name):
+    return f"Welcome to CCIT, {name}!"
+
+# Call the function
+print(greet_student("Your Name"))`,
+    
+    html: `<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Webpage</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .welcome { color: #0066cc; font-size: 24px; }
+        .highlight { background: #f0f8ff; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1 class="welcome">Welcome to CCIT! 🚀</h1>
+    <div class="highlight">
+        <p>This is your first webpage. Try editing the HTML and CSS!</p>
+    </div>
+</body>
+</html>`
+};
+
+function switchLanguage(lang) {
+    // Update active button
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+    
+    // Update code editor
+    document.getElementById('code-editor').value = codeTemplates[lang];
+    clearOutput();
+}
+
+function runCode() {
+    const code = document.getElementById('code-editor').value;
+    const output = document.getElementById('code-output');
+    const activeLang = document.querySelector('.lang-btn.active').textContent.trim().toLowerCase();
+    
+    // Clear previous output
+    output.innerHTML = '';
+    
+    try {
+        if (activeLang.includes('javascript')) {
+            // Capture console.log output
+            const logs = [];
+            const originalLog = console.log;
+            console.log = (...args) => {
+                logs.push(args.join(' '));
+            };
+            
+            // Execute code
+            eval(code);
+            
+            // Restore console.log
+            console.log = originalLog;
+            
+            // Display output
+            if (logs.length > 0) {
+                logs.forEach(log => {
+                    const logElement = document.createElement('div');
+                    logElement.className = 'output-line';
+                    logElement.textContent = log;
+                    output.appendChild(logElement);
+                });
+            } else {
+                output.innerHTML = '<div class="output-line">Code executed successfully (no output)</div>';
+            }
+        } else if (activeLang.includes('html')) {
+            // Create iframe for HTML output
+            const iframe = document.createElement('iframe');
+            iframe.style.width = '100%';
+            iframe.style.height = '300px';
+            iframe.style.border = '1px solid #ddd';
+            iframe.style.borderRadius = '4px';
+            output.appendChild(iframe);
+            
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            iframeDoc.open();
+            iframeDoc.write(code);
+            iframeDoc.close();
+        } else {
+            output.innerHTML = '<div class="output-line">Python execution not available in browser. Try JavaScript or HTML!</div>';
+        }
+    } catch (error) {
+        output.innerHTML = `<div class="output-line error">Error: ${error.message}</div>`;
+    }
+}
+
+function resetCode() {
+    const activeLang = document.querySelector('.lang-btn.active').textContent.trim().toLowerCase();
+    if (activeLang.includes('javascript')) {
+        document.getElementById('code-editor').value = codeTemplates.javascript;
+    } else if (activeLang.includes('python')) {
+        document.getElementById('code-editor').value = codeTemplates.python;
+    } else if (activeLang.includes('html')) {
+        document.getElementById('code-editor').value = codeTemplates.html;
+    }
+    clearOutput();
+}
+
+function clearOutput() {
+    document.getElementById('code-output').innerHTML = `
+        <div class="output-placeholder">
+            <i class="fas fa-terminal"></i>
+            <p>Click "Run" to see your code output here!</p>
+        </div>
+    `;
+}
+
+function loadLesson(lessonType) {
+    const lessons = {
+        variables: `// Lesson: Variables & Data Types
+// Variables store information that can be used later
+
+// String (text)
+let studentName = "Alex";
+let collegeName = "CCIT";
+
+// Number
+let age = 20;
+let gpa = 3.8;
+
+// Boolean (true/false)
+let isEnrolled = true;
+let hasGraduated = false;
+
+// Try it yourself!
+console.log("Student:", studentName);
+console.log("Age:", age);
+console.log("GPA:", gpa);
+console.log("Enrolled:", isEnrolled);
+
+// Challenge: Create variables for your own information!`,
+        
+        functions: `// Lesson: Functions
+// Functions are reusable blocks of code
+
+// Basic function
+function sayHello() {
+    console.log("Hello from CCIT!");
+}
+
+// Function with parameters
+function calculateGPA(totalPoints, totalCredits) {
+    return totalPoints / totalCredits;
+}
+
+// Function with multiple parameters
+function introduceStudent(name, major, year) {
+    return \`Hi, I'm \${name}, a \${year} year \${major} student!\`;
+}
+
+// Try the functions!
+sayHello();
+console.log("GPA:", calculateGPA(120, 32));
+console.log(introduceStudent("Sarah", "Computer Science", "3rd"));
+
+// Challenge: Create a function that calculates the area of a rectangle!`,
+        
+        loops: `// Lesson: Loops & Iteration
+// Loops help you repeat code efficiently
+
+// For loop - repeat a specific number of times
+console.log("Counting to 5:");
+for (let i = 1; i <= 5; i++) {
+    console.log("Count:", i);
+}
+
+// While loop - repeat while condition is true
+console.log("\\nCountdown:");
+let countdown = 3;
+while (countdown > 0) {
+    console.log(countdown);
+    countdown--;
+}
+console.log("Blast off! 🚀");
+
+// Loop through an array
+const courses = ["Programming", "Database", "Web Design", "AI"];
+console.log("\\nCCIT Courses:");
+for (let course of courses) {
+    console.log("- " + course);
+}
+
+// Challenge: Create a loop that prints even numbers from 2 to 10!`
+    };
+    
+    if (lessons[lessonType]) {
+        document.getElementById('code-editor').value = lessons[lessonType];
+        clearOutput();
+        
+        // Update progress
+        const card = event.currentTarget;
+        const progressFill = card.querySelector('.progress-fill');
+        const progressText = card.querySelector('.progress-text');
+        progressFill.style.width = '100%';
+        progressText.textContent = 'Completed!';
+    }
+}
+
+function loadChallenge() {
+    const challengeCode = `// FizzBuzz Challenge
+// Write a program that prints numbers 1-100
+// For multiples of 3: print "Fizz"
+// For multiples of 5: print "Buzz"  
+// For multiples of both: print "FizzBuzz"
+
+// Your solution here:
+for (let i = 1; i <= 100; i++) {
+    // Add your logic here
+    console.log(i);
+}
+
+// Hint: Use the modulo operator (%) to check for multiples
+// Example: i % 3 === 0 means i is divisible by 3`;
+    
+    document.getElementById('code-editor').value = challengeCode;
+    clearOutput();
+}
+
+function showHint() {
+    alert("Hint: Use if-else statements with the modulo operator (%). Check for multiples of 15 first, then 3, then 5!");
+}
+</script>
+{% endblock %}

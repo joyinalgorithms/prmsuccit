@@ -1,88 +1,96 @@
 {% extends "base.html" %}
 
+{% block description %}Meet our distinguished faculty members at CCIT. Learn about our dean, program chairs, and expert faculty in Computer Science and Information Technology.{% endblock %}
+
 {% block content %}
 <section class="page-header">
     <div class="container">
-        <h1 class="page-title animate-fade-in">Our Faculty</h1>
-        <p class="page-subtitle animate-fade-in-delay">Meet our distinguished educators and researchers</p>
+        <h1 class="page-title">Our Faculty</h1>
+        <p class="page-subtitle">Meet the experts shaping tomorrow's tech leaders</p>
     </div>
 </section>
 
-<section class="faculty-content">
+<section class="leadership">
     <div class="container">
-        <!-- Dean Section -->
-        <div class="leadership-section">
-            <h2 class="section-title">College Leadership</h2>
-            <div class="dean-card animate-on-scroll">
+        <h2 class="section-title">Leadership Team</h2>
+        
+        <div class="dean-section">
+            <div class="faculty-card featured">
                 <div class="faculty-image">
-                    <img src="{{ faculty.dean.image }}" alt="{{ faculty.dean.name }}" loading="lazy">
+                    <img src="{{ faculty.dean.image }}" alt="{{ faculty.dean.name }}" class="responsive-image">
                 </div>
                 <div class="faculty-info">
-                    <h3>{{ faculty.dean.name }}</h3>
-                    <p class="faculty-position">{{ faculty.dean.position }}</p>
-                    <p class="faculty-department">{{ faculty.dean.department }}</p>
+                    <h3 class="faculty-name">{{ faculty.dean.name }}</h3>
+                    <p class="faculty-title">{{ faculty.dean.title }}</p>
+                    <p class="faculty-bio">{{ faculty.dean.bio }}</p>
                 </div>
             </div>
         </div>
-
-        <!-- Program Chairs -->
+        
         <div class="chairs-section">
-            <h2 class="section-title">Program Chairs</h2>
             <div class="chairs-grid">
-                <div class="chair-card animate-on-scroll">
+                <div class="faculty-card">
                     <div class="faculty-image">
-                        <img src="{{ faculty.cs_chair.image }}" alt="{{ faculty.cs_chair.name }}" loading="lazy">
+                        <img src="{{ faculty.cs_chair.image }}" alt="{{ faculty.cs_chair.name }}" class="responsive-image">
                     </div>
                     <div class="faculty-info">
-                        <h3>{{ faculty.cs_chair.name }}</h3>
-                        <p class="faculty-position">{{ faculty.cs_chair.position }}</p>
-                        <p class="faculty-department">{{ faculty.cs_chair.department }}</p>
+                        <h3 class="faculty-name">{{ faculty.cs_chair.name }}</h3>
+                        <p class="faculty-title">{{ faculty.cs_chair.title }}</p>
+                        <p class="faculty-bio">{{ faculty.cs_chair.bio }}</p>
                     </div>
                 </div>
                 
-                <div class="chair-card animate-on-scroll">
+                <div class="faculty-card">
                     <div class="faculty-image">
-                        <img src="{{ faculty.it_chair.image }}" alt="{{ faculty.it_chair.name }}" loading="lazy">
+                        <img src="{{ faculty.it_chair.image }}" alt="{{ faculty.it_chair.name }}" class="responsive-image">
                     </div>
                     <div class="faculty-info">
-                        <h3>{{ faculty.it_chair.name }}</h3>
-                        <p class="faculty-position">{{ faculty.it_chair.position }}</p>
-                        <p class="faculty-department">{{ faculty.it_chair.department }}</p>
+                        <h3 class="faculty-name">{{ faculty.it_chair.name }}</h3>
+                        <p class="faculty-title">{{ faculty.it_chair.title }}</p>
+                        <p class="faculty-bio">{{ faculty.it_chair.bio }}</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-        <!-- Computer Science Faculty -->
-        <div class="department-faculty">
-            <h2 class="section-title">Computer Science Faculty</h2>
+<section class="faculty-departments">
+    <div class="container">
+        <div class="department-section">
+            <h2 class="section-title">
+                <i class="fas fa-code"></i>
+                Computer Science Faculty
+            </h2>
             <div class="faculty-grid">
                 {% for member in faculty.cs_faculty %}
-                <div class="faculty-card animate-on-scroll">
+                <div class="faculty-card">
                     <div class="faculty-image">
-                        <img src="{{ member.image }}" alt="{{ member.name }}" loading="lazy">
+                        <img src="{{ member.image }}" alt="{{ member.name }}" class="responsive-image">
                     </div>
                     <div class="faculty-info">
-                        <h3>{{ member.name }}</h3>
-                        <p class="faculty-department">Computer Science</p>
+                        <h3 class="faculty-name">{{ member.name }}</h3>
+                        <p class="faculty-specialization">{{ member.specialization }}</p>
                     </div>
                 </div>
                 {% endfor %}
             </div>
         </div>
-
-        <!-- Information Technology Faculty -->
-        <div class="department-faculty">
-            <h2 class="section-title">Information Technology Faculty</h2>
+        
+        <div class="department-section">
+            <h2 class="section-title">
+                <i class="fas fa-server"></i>
+                Information Technology Faculty
+            </h2>
             <div class="faculty-grid">
                 {% for member in faculty.it_faculty %}
-                <div class="faculty-card animate-on-scroll">
+                <div class="faculty-card">
                     <div class="faculty-image">
-                        <img src="{{ member.image }}" alt="{{ member.name }}" loading="lazy">
+                        <img src="{{ member.image }}" alt="{{ member.name }}" class="responsive-image">
                     </div>
                     <div class="faculty-info">
-                        <h3>{{ member.name }}</h3>
-                        <p class="faculty-department">Information Technology</p>
+                        <h3 class="faculty-name">{{ member.name }}</h3>
+                        <p class="faculty-specialization">{{ member.specialization }}</p>
                     </div>
                 </div>
                 {% endfor %}

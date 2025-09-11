@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+
+{% block description %}Explore CCIT through our comprehensive gallery showcasing our beautiful campus, exciting events, and vibrant student life{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title">Gallery</h1>
+        <p class="page-subtitle">Explore CCIT through images</p>
+    </div>
+</section>
+
+<section class="gallery-section">
+    <div class="container">
+        <div class="gallery-tabs">
+            <button class="tab-btn active" onclick="showGallery('building')">CCIT Building</button>
+            <button class="tab-btn" onclick="showGallery('events')">Previous Events</button>
+            <button class="tab-btn" onclick="showGallery('students')">Student Life</button>
+        </div>
+
+        <div class="gallery-content">
+            <!-- Building Gallery -->
+            <div class="gallery-grid active" id="building-gallery">
+                {% for item in gallery.building %}
+                <div class="gallery-item" onclick="openModal('{{ item.image }}', '{{ item.title }}', '{{ item.description }}')">
+                    <img src="{{ item.image }}" alt="{{ item.title }}" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3 class="gallery-title">{{ item.title }}</h3>
+                            <p class="gallery-description">{{ item.description }}</p>
+                        </div>
+                        <div class="gallery-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Events Gallery -->
+            <div class="gallery-grid" id="events-gallery">
+                {% for item in gallery.events %}
+                <div class="gallery-item" onclick="openModal('{{ item.image }}', '{{ item.title }}', '{{ item.description }}')">
+                    <img src="{{ item.image }}" alt="{{ item.title }}" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3 class="gallery-title">{{ item.title }}</h3>
+                            <p class="gallery-description">{{ item.description }}</p>
+                        </div>
+                        <div class="gallery-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- Students Gallery -->
+            <div class="gallery-grid" id="students-gallery">
+                {% for item in gallery.students %}
+                <div class="gallery-item" onclick="openModal('{{ item.image }}', '{{ item.title }}', '{{ item.description }}')">
+                    <img src="{{ item.image }}" alt="{{ item.title }}" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3 class="gallery-title">{{ item.title }}</h3>
+                            <p class="gallery-description">{{ item.description }}</p>
+                        </div>
+                        <div class="gallery-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal for full-size images -->
+<div class="modal" id="gallery-modal">
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-image" id="modal-image" src="/placeholder.svg" alt="">
+        <div class="modal-info">
+            <h3 class="modal-title" id="modal-title"></h3>
+            <p class="modal-description" id="modal-description"></p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+function showGallery(category) {
+    // Hide all galleries
+    document.querySelectorAll('.gallery-grid').forEach(grid => {
+        grid.classList.remove('active');
+    });
+    
+    // Remove active class from all tabs
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // Show selected gallery
+    document.getElementById(category + '-gallery').classList.add('active');
+    
+    // Add active class to clicked tab
+    event.target.classList.add('active');
+}
+
+function openModal(imageSrc, title, description) {
+    const modal = document.getElementById('gallery-modal');
+    const modalImage = document.getElementById('modal-image');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDescription = document.getElementById('modal-description');
+    
+    modalImage.src = imageSrc;
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
+    
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    const modal = document.getElementById('gallery-modal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside the image
+document.getElementById('gallery-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+});
+</script>
+{% endblock %}

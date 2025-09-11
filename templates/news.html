@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 
+{% block description %}Stay updated with the latest news from CCIT. Read about our achievements, events, and developments in computer science and information technology.{% endblock %}
+
 {% block content %}
 <section class="page-header">
     <div class="container">
-        <h1 class="page-title animate-fade-in">College News</h1>
-        <p class="page-subtitle animate-fade-in-delay">Stay updated with the latest happenings at CCIT</p>
+        <h1 class="page-title">Latest News</h1>
+        <p class="page-subtitle">Stay updated with CCIT developments</p>
     </div>
 </section>
 
@@ -12,18 +14,33 @@
     <div class="container">
         <div class="news-grid">
             {% for article in news %}
-            <article class="news-card animate-on-scroll">
+            <article class="news-card">
                 <div class="news-image">
-                    <img src="{{ article.image }}" alt="{{ article.title }}" loading="lazy">
+                    <img src="{{ article.image }}" alt="{{ article.title }}" class="responsive-image">
                 </div>
                 <div class="news-content-area">
-                    <div class="news-date">{{ article.date }}</div>
-                    <h2>{{ article.title }}</h2>
-                    <p>{{ article.summary }}</p>
-                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    <div class="news-meta">
+                        <time class="news-date">{{ article.date }}</time>
+                    </div>
+                    <h2 class="news-title">{{ article.title }}</h2>
+                    <p class="news-summary">{{ article.summary }}</p>
+                    <a href="#" class="news-link">Read More</a>
                 </div>
             </article>
             {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="newsletter">
+    <div class="container">
+        <div class="newsletter-content">
+            <h2 class="section-title">Stay Connected</h2>
+            <p>Subscribe to our newsletter to receive the latest updates about CCIT programs, events, and achievements.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
         </div>
     </div>
 </section>

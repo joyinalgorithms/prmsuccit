@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block description %}Learn more about {{ organization.name }} at CCIT. Join our community and participate in exciting activities and projects.{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title">{{ organization.name }}</h1>
+        <p class="page-subtitle">{{ organization.description }}</p>
+    </div>
+</section>
+
+<section class="organization-detail">
+    <div class="container">
+        <div class="org-detail-grid">
+            <div class="org-detail-image">
+                <img src="{{ organization.image }}" alt="{{ organization.name }}" class="responsive-image">
+            </div>
+            <div class="org-detail-content">
+                <h2>About {{ organization.name }}</h2>
+                <p>{{ organization.description }}</p>
+                
+                <div class="org-activities">
+                    <h3>Activities & Events</h3>
+                    <ul>
+                        <li>Weekly meetings and workshops</li>
+                        <li>Guest speaker sessions</li>
+                        <li>Hands-on project development</li>
+                        <li>Industry networking events</li>
+                        <li>Competition participation</li>
+                        <li>Community service projects</li>
+                    </ul>
+                </div>
+                
+                <div class="org-contact">
+                    <h3>Get Involved</h3>
+                    <p>Interested in joining? Contact us for more information about membership and upcoming events.</p>
+                    <a href="#" class="btn btn-primary">Contact Organization</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block description %}Explore CCIT departments: Computer Science and Information Technology. Learn about our comprehensive programs and specializations.{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-title">Our Departments</h1>
+        <p class="page-subtitle">Explore our comprehensive academic programs</p>
+    </div>
+</section>
+
+<section class="departments-overview">
+    <div class="container">
+        <div class="departments-grid">
+            <div class="department-card">
+                <div class="dept-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h2 class="dept-title">Computer Science</h2>
+                <p class="dept-description">Master the art of programming, algorithms, and software development. Our CS program prepares you for careers in software engineering, AI, data science, and more.</p>
+                <div class="dept-highlights">
+                    <h4>Key Areas:</h4>
+                    <ul>
+                        <li>Software Engineering</li>
+                        <li>Artificial Intelligence</li>
+                        <li>Data Science & Analytics</li>
+                        <li>Machine Learning</li>
+                        <li>Computer Graphics</li>
+                        <li>Algorithms & Theory</li>
+                    </ul>
+                </div>
+                <a href="{{ url_for('cs_department') }}" class="btn btn-primary">Explore CS Program</a>
+            </div>
+            
+            <div class="department-card">
+                <div class="dept-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h2 class="dept-title">Information Technology</h2>
+                <p class="dept-description">Build expertise in network systems, cybersecurity, and IT infrastructure. Our IT program focuses on practical skills for managing modern technology systems.</p>
+                <div class="dept-highlights">
+                    <h4>Key Areas:</h4>
+                    <ul>
+                        <li>Network Security</li>
+                        <li>Database Administration</li>
+                        <li>Cloud Computing</li>
+                        <li>IT Project Management</li>
+                        <li>System Administration</li>
+                        <li>Cybersecurity</li>
+                    </ul>
+                </div>
+                <a href="{{ url_for('it_department') }}" class="btn btn-primary">Explore IT Program</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="shared-resources">
+    <div class="container">
+        <h2 class="section-title">Shared Resources & Facilities</h2>
+        <div class="resources-grid">
+            <div class="resource-item">
+                <i class="fas fa-flask"></i>
+            </div>
+            <div class="resource-item">
+                <i class="fas fa-laptop"></i>
+                <h3>Computer Labs</h3>
+                <p>Modern computing facilities with the latest hardware and software for hands-on learning.</p>
+            </div>
+            <div class="resource-item">
+                <i class="fas fa-book"></i>
+                <h3>Digital Library</h3>
+                <p>Extensive collection of technical resources, journals, and online databases.</p>
+            </div>
+            <div class="resource-item">
+                <i class="fas fa-users"></i>
+                <h3>Collaboration Spaces</h3>
+                <p>Modern spaces designed for team projects and collaborative learning experiences.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

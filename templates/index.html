@@ -1,0 +1,327 @@
+{% extends "base.html" %}
+
+{% block description %}College of Computer and Information Technology - Leading education in Computer Science and Information Technology with cutting-edge programs and research{% endblock %}
+
+{% block content %}
+<section class="slideshow-section">
+  <div class="slideshow-container">
+    <div class="slideshow-wrapper">
+      {% for slide in slideshow %}
+      <div class="slide {% if loop.first %}active{% endif %}"
+           style="background-image: url('{{ url_for('static', filename=slide.image|replace('/static/','') ) }}');">
+        <div class="slide-overlay">
+          <div class="slide-content">
+            <h2 class="slide-title">{{ slide.title }}</h2>
+            {% if slide.subtitle %}
+            <p class="slide-subtitle">{{ slide.subtitle }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="slideshow-controls">
+      <button class="slide-btn prev-btn" onclick="changeSlide(-1)">❮</button>
+      <button class="slide-btn next-btn" onclick="changeSlide(1)">❯</button>
+    </div>
+
+    <div class="slideshow-indicators">
+      {% for slide in slideshow %}
+      <span class="indicator {% if loop.first %}active{% endif %}" onclick="currentSlide({{ loop.index0 }})" aria-label="Go to slide {{ loop.index }}"></span>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="gradient-text">Future of Technology</span>
+                <br>Starts Here
+            </h1>
+            <p class="hero-description">
+                Empowering the next generation of tech leaders through innovative education in Computer Science and Information Technology.
+            </p>
+            <div class="hero-buttons">
+                <a href="{{ url_for('about') }}" class="btn btn-primary">Explore Programs</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-block">
+                <div class="code-line">
+                    <span class="code-keyword">class</span> 
+                    <span class="code-class">Future</span>
+                    <span class="code-bracket">{</span>
+                </div>
+                <div class="code-line">
+                    <span class="code-indent">  </span>
+                    <span class="code-function">innovate</span>
+                    <span class="code-bracket">()</span>
+                    <span class="code-bracket">;</span>
+                </div>
+                <div class="code-line">
+                    <span class="code-indent">  </span>
+                    <span class="code-function">learn</span>
+                    <span class="code-bracket">()</span>
+                    <span class="code-bracket">;</span>
+                </div>
+                <div class="code-line">
+                    <span class="code-indent">  </span>
+                    <span class="code-function">succeed</span>
+                    <span class="code-bracket">()</span>
+                    <span class="code-bracket">;</span>
+                </div>
+                <div class="code-line">
+                    <span class="code-bracket">}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Enhanced features section with video integration -->
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Why Choose CCIT?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3 class="feature-title">Cutting-Edge Curriculum</h3>
+                <p class="feature-description">Stay ahead with the latest technologies and industry-relevant coursework designed by experts.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="feature-title">Expert Faculty</h3>
+                <p class="feature-description">Learn from industry professionals and renowned researchers with real-world experience.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3 class="feature-title">Innovation Labs</h3>
+                <p class="feature-description">Access state-of-the-art facilities and equipment for hands-on learning and research.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3 class="feature-title">Career Success</h3>
+                <p class="feature-description">95% job placement rate with top tech companies and competitive starting salaries.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Added video sections with autoplay on scroll -->
+<section class="video-section" id="experience-video">
+    <div class="container">
+        <div class="video-content">
+            <div class="video-text">
+                <h2 class="section-title">Experience CCIT Life</h2>
+                <p class="video-description">
+                    Discover what makes our college community special. From collaborative learning environments to cutting-edge research opportunities, see how our students thrive in the world of technology.
+                </p>
+                <div class="video-features">
+                    <div class="video-feature">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Hands-on Learning</span>
+                    </div>
+                    <div class="video-feature">
+                        <i class="fas fa-users"></i>
+                        <span>Collaborative Environment</span>
+                    </div>
+                    <div class="video-feature">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Innovation Focus</span>
+                    </div>
+                </div>
+            </div>
+            <div class="video-wrapper">
+                <!-- Fixed YouTube iframe with proper URL syntax and sizing -->
+                <iframe class="youtube-video"
+                        src="https://www.youtube.com/embed/fkqfZfasRb8?enablejsapi=1&rel=0&modestbranding=1"
+                        title="Experience CCIT Life"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="programs">
+    <div class="container">
+        <h2 class="section-title">Our Programs</h2>
+        <div class="programs-grid">
+            <div class="program-card">
+                <div class="program-header">
+                    <h3 class="program-title">Computer Science</h3>
+                    <div class="program-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+                <p class="program-description">Master the fundamentals of programming, algorithms, and software development with our comprehensive CS program.</p>
+                <ul class="program-features">
+                    <li>Software Engineering</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Data Science</li>
+                    <li>Machine Learning</li>
+                </ul>
+                <a href="{{ url_for('cs_department') }}" class="btn btn-outline">Learn More</a>
+            </div>
+            
+            <div class="program-card">
+                <div class="program-header">
+                    <h3 class="program-title">Information Technology</h3>
+                    <div class="program-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                </div>
+                <p class="program-description">Build expertise in network systems, cybersecurity, and IT infrastructure management.</p>
+                <ul class="program-features">
+                    <li>Network Security</li>
+                    <li>Database Systems</li>
+                    <li>Cloud Computing</li>
+                    <li>IT Management</li>
+                </ul>
+                <a href="{{ url_for('it_department') }}" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Added second video section -->
+<section class="video-section alt" id="why-choose-video">
+    <div class="container">
+        <div class="video-content reverse">
+            <div class="video-wrapper">
+                <!-- Fixed YouTube iframe with proper URL syntax -->
+                <iframe class="youtube-video"
+                        src="https://www.youtube.com/embed/OFdAgcbynH4?enablejsapi=1&rel=0&modestbranding=1"
+                        title="Why Choose CCIT?"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-text">
+                <h2 class="section-title">Why Choose CCIT?</h2>
+                <p class="video-description">
+                    Join a community of innovators, researchers, and future tech leaders. Our commitment to excellence and cutting-edge education sets us apart in the world of technology education.
+                </p>
+                <div class="video-stats">
+                    <div class="video-stat">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Job Placement Rate</span>
+                    </div>
+                    <div class="video-stat">
+                        <span class="stat-number">$75K</span>
+                        <span class="stat-label">Average Starting Salary</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">Students</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Job Placement</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Expert Faculty</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">8+</div>
+                <div class="stat-label">Computer Labs</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block extra_scripts %}
+<script>
+let slideIndex = 0;
+let slideInterval = null;
+
+function qs(selector) { return document.querySelectorAll(selector); }
+
+function showSlide(index) {
+  const slides = qs('.slide');
+  const indicators = qs('.indicator');
+  if (!slides.length) return;
+  if (index >= slides.length) index = 0;
+  if (index < 0) index = slides.length - 1;
+
+  slides.forEach((s, i) => {
+    s.classList.toggle('active', i === index);
+  });
+  indicators.forEach((ind, i) => {
+    ind.classList.toggle('active', i === index);
+  });
+
+  slideIndex = index;
+}
+
+function changeSlide(direction) {
+  const slides = qs('.slide');
+  if (!slides.length) return;
+  showSlide((slideIndex + direction + slides.length) % slides.length);
+  restartSlideshow();
+}
+
+function currentSlide(index) {
+  showSlide(index);
+  restartSlideshow();
+}
+
+function startSlideshow() {
+  clearInterval(slideInterval);
+  slideInterval = setInterval(() => {
+    const slides = qs('.slide');
+    if (slides.length <= 1) return;
+    showSlide((slideIndex + 1) % slides.length);
+  }, 5000);
+}
+
+function restartSlideshow() {
+  clearInterval(slideInterval);
+  startSlideshow();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // quick sanity check: ensure slide elements exist
+  const slides = qs('.slide');
+  if (slides.length === 0) {
+    console.warn('Slideshow: no .slide elements found.');
+    return;
+  }
+  // show first slide explicitly
+  showSlide(0);
+  startSlideshow();
+});
+
+// helpful for debug (open console and run showSlide(1) etc)
+</script>
+{% endblock %}

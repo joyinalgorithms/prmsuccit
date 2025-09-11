@@ -1,47 +1,58 @@
 {% extends "base.html" %}
 
+{% block description %}Discover student organizations at CCIT. Join our vibrant community of Computer Science Society, IT Innovation Club, and Coding Bootcamp Society.{% endblock %}
+
 {% block content %}
 <section class="page-header">
     <div class="container">
-        <h1 class="page-title animate-fade-in">Student Organizations</h1>
-        <p class="page-subtitle animate-fade-in-delay">Discover our vibrant student community and leadership</p>
+        <h1 class="page-title">Student Organizations</h1>
+        <p class="page-subtitle">Join our vibrant community of tech enthusiasts</p>
     </div>
 </section>
 
 <section class="organizations-content">
     <div class="container">
-        {% for org in organizations %}
-        <div class="organization-card animate-on-scroll">
-            <div class="org-header">
-                <h2>{{ org.name }}</h2>
-                <p class="org-description">{{ org.description }}</p>
-            </div>
-            
-            <div class="org-content">
-                <div class="officers-section">
-                    <h3>Officers</h3>
-                    <div class="officers-grid">
-                        {% for officer in org.officers %}
-                        <div class="officer-card">
-                            <div class="officer-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="officer-info">
-                                <h4>{{ officer.name }}</h4>
-                                <p>{{ officer.position }}</p>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>
+        <div class="organizations-grid">
+            {% for org in organizations %}
+            <div class="organization-card">
+                <div class="org-image">
+                    <img src="{{ org.image }}" alt="{{ org.name }}" class="responsive-image">
                 </div>
-                
-                <div class="platform-section">
-                    <h3>Platform & Goals</h3>
-                    <p>{{ org.platform }}</p>
+                <div class="org-content">
+                    <h3 class="org-name">{{ org.name }}</h3>
+                    <p class="org-description">{{ org.description }}</p>
+                    <a href="{{ org.link }}" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="join-us">
+    <div class="container">
+        <div class="join-content">
+            <h2 class="section-title">Ready to Get Involved?</h2>
+            <p class="join-description">Join one of our student organizations and connect with like-minded peers, participate in exciting projects, and enhance your learning experience beyond the classroom.</p>
+            <div class="join-benefits">
+                <div class="benefit-item">
+                    <i class="fas fa-users"></i>
+                    <span>Network with Peers</span>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Work on Real Projects</span>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-trophy"></i>
+                    <span>Participate in Competitions</span>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Enhance Your Skills</span>
                 </div>
             </div>
         </div>
-        {% endfor %}
     </div>
 </section>
 {% endblock %}
