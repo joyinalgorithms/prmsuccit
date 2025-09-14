@@ -45,19 +45,22 @@ organizations_data = [
         'name': 'College of Communication and Information Technology - Student Body Organization',
         'image': '/static/images/ccitsbo.jpg',
         'description': 'The College of Communication and Information Technology (CCIT) Student Body Organization (SBO) at President Ramon Magsaysay State University (PRMSU) in Iba is the official student government for all CCIT students. The CCIT-SBO is led by a set of elected student officers and is responsible for representing the interests and addressing the concerns of its constituents.',
-        'link': '/organizations/ccitsbo'
+        'link': '/organizations/ccitsbo',
+        'page':'https://www.facebook.com/prmsumain.ccit.sbo'
     },
     {
         'name': 'Association of Students for Communication and Information Interchange',
         'image': '/static/images/ascii.jpg',
         'description': 'The ASCII is a group specifically for students taking up a Bachelor of Science in Computer Science (BSCS) at PRMSU.',
-        'link': '/organizations/ascii'
+        'link': '/organizations/ascii',
+        'page':'https://www.facebook.com/prmsumain.ccit.ascii'
     },
     {
         'name': 'Development, Innovation, and Growth for Information Technology Students (DIGITS)',
         'image': '/static/images/digits.jpg',
         'description': 'The DIGITS is a group specifically for students taking up a Bachelor of Science in Information Technology (BSIT) at PRMSU.',
-        'link': '/organizations/digits'
+        'link': '/organizations/digits',
+        'page':'https://www.facebook.com/prmsu.ccit.digits'
     }
 ]
 
