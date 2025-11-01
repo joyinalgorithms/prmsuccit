@@ -62,9 +62,58 @@ organizations_data = [
         'link': '/organizations/digits',
         'page':'https://www.facebook.com/prmsu.ccit.digits'
     }
+    {
+        'name': 'The Cipher - CCIT Publication',
+        'image': '/static/images/cipher.jpg',
+        'description': 'The official student publication of PRMSU - College of Communication and Information Technology',
+        'link': '/organizations/cipher',
+        'page':'https://www.facebook.com/cipherpublication'
+    }
 ]
 
 news_data = [
+    {
+        'title': "Skills Mastery And Readiness in Technology (S.M.A.R.T.) DoLOIS",
+        'date': '2025-10-24',
+        'summary': 'The College of Communication and Information Technology (CCIT) conducted an extension program entitled "Skills Mastery And Readiness in Technology (S.M.A.R.T.) DoLOIS" at the Doña Luisa Obieta Integrated School, Sitio Olpoy, Amungan, Iba, Zambales..',
+        'image': '/static/images/news/news10.jpg'
+    },
+    {
+        'title': "𝐂𝐨𝐧𝐠𝐫𝐚𝐭𝐮𝐥𝐚𝐭𝐢𝐨𝐧𝐬, 𝐋𝐨𝐯𝐞𝐥𝐲 𝐉𝐨𝐲𝐜𝐞 𝐀. 𝐏𝐚𝐥𝐦𝐚𝐫𝐢𝐧! 🎉",
+        'date': '2025-10-17',
+        'summary': 'Lovely Joyce A. Palmarin proudly bagged 1st Runner-Up in the Medal Layout Design Competition at the Regional Assembly on Information Technology Education (RAITE) 2025..',
+        'image': '/static/images/news/news9.jpg'
+    },
+    {
+        'title': "Shaping Future-Ready Professionals: Webinar-Lecture on Business Analytics and Internet of Things (IoT) ",
+        'date': '2025-10-21',
+        'summary': 'CCIT conducts a webinar titled: Shaping Future-Ready Professionals: Webinar-Lecture on Business Analytics and Internet of Things (IoT)..',
+        'image': '/static/images/news/news8.jpg'
+    },
+    {
+        'title': "Regional Assembly on Information Technology Education (RAITE) 2025 ",
+        'date': '2025-10-17',
+        'summary': 'Delegates from President Ramon Magsaysay State University (PRMSU) arrived at NEUST Sumacab campus on October 17 to participate in the 2025 Regional Assembly on Information Technology Education (RAITE)..',
+        'image': '/static/images/news/news7.jpg'
+    },
+    {
+        'title': "𝗧𝗵𝗲 𝟯𝗿𝗱 𝗣𝗿𝗲𝘀𝗶𝗱𝗲𝗻𝘁’𝘀 𝗖𝘂𝗽 𝗵𝗮𝘀 𝗯𝗲𝗴𝘂𝗻!🎉",
+        'date': '2025-10-13',
+        'summary': 'Cluster 3—CCIT x CIT—kicked off the 3rd President’s Cup 2025 with a spirited parade, marking the start of a united march toward new challenges, triumphs, and campus pride.',
+        'image': '/static/images/news/news6.jpg'
+    },
+    {
+        'title': "Happy Teachers' Day!",
+        'date': '2025-10-04',
+        'summary': 'CCIT students honor their faculty on Teachers’ Day, celebrating the mentors whose dedication and wisdom continue to shape future innovators and leaders....',
+        'image': '/static/images/news/news5.jpg'
+    },
+    {
+        'title': '3rd President’s Cup 2025: Tryouts',
+        'date': '2025-09-21',
+        'summary': 'The 3rd President’s Cup 2025 kicks off with tryouts from September 23–25, rallying students to compete across 12 sports and earn the honor of representing their college...',
+        'image': '/static/images/news/news4.jpg'
+    },
     {
         'title': '𝟏𝟏𝟖𝐭𝐡 𝐁𝐢𝐫𝐭𝐡 𝐀𝐧𝐧𝐢𝐯𝐞𝐫𝐬𝐚𝐫𝐲 𝐨𝐟 𝐏𝐫𝐞𝐬𝐢𝐝𝐞𝐧𝐭 𝐑𝐚𝐦𝐨𝐧 𝐌𝐚𝐠𝐬𝐚𝐲𝐬𝐚𝐲',
         'date': '2025-08-31',
