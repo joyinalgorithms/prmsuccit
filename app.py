@@ -76,67 +76,78 @@ news_data = [
         'title': "Skills Mastery And Readiness in Technology (S.M.A.R.T.) DoLOIS",
         'date': '2025-10-24',
         'summary': 'The College of Communication and Information Technology (CCIT) conducted an extension program entitled "Skills Mastery And Readiness in Technology (S.M.A.R.T.) DoLOIS" at the Doña Luisa Obieta Integrated School, Sitio Olpoy, Amungan, Iba, Zambales..',
-        'image': '/static/images/news/news10.jpg'
+        'image': '/static/images/news/news10.jpg',
+        'link': 'https://www.facebook.com/cipherpublication/posts/pfbid02WyWzAN5whutstf9yVK4QMPrbBs6FZWccQQhBaYWECVMiEFK76ZzWbkBSYQM3UNhsl'
     },
     {
         'title': "𝐂𝐨𝐧𝐠𝐫𝐚𝐭𝐮𝐥𝐚𝐭𝐢𝐨𝐧𝐬, 𝐋𝐨𝐯𝐞𝐥𝐲 𝐉𝐨𝐲𝐜𝐞 𝐀. 𝐏𝐚𝐥𝐦𝐚𝐫𝐢𝐧! 🎉",
         'date': '2025-10-17',
         'summary': 'Lovely Joyce A. Palmarin proudly bagged 1st Runner-Up in the Medal Layout Design Competition at the Regional Assembly on Information Technology Education (RAITE) 2025..',
-        'image': '/static/images/news/news9.jpg'
+        'image': '/static/images/news/news9.jpg',
+        'link': 'https://www.facebook.com/prmsumain.ccit.sbo/posts/pfbid0dvWCBRxUpXW5PuV3xatv4JvZ3QmPGdyNm73SgdRAnVpwFdTgQMf2sgepvos6ejkml'
     },
     {
         'title': "Shaping Future-Ready Professionals: Webinar-Lecture on Business Analytics and Internet of Things (IoT) ",
         'date': '2025-10-21',
         'summary': 'CCIT conducts a webinar titled: Shaping Future-Ready Professionals: Webinar-Lecture on Business Analytics and Internet of Things (IoT)..',
-        'image': '/static/images/news/news8.jpg'
+        'image': '/static/images/news/news8.jpg',
+        'link': 'https://www.facebook.com/cipherpublication/posts/pfbid02eq9BnfCb2Czsnv79oQgHZgRGXp4nk2h6Wx36X4U8yUDZJi9tYFEXg25eP56AQ8cjl'
     },
     {
         'title': "Regional Assembly on Information Technology Education (RAITE) 2025 ",
         'date': '2025-10-17',
         'summary': 'Delegates from President Ramon Magsaysay State University (PRMSU) arrived at NEUST Sumacab campus on October 17 to participate in the 2025 Regional Assembly on Information Technology Education (RAITE)..',
-        'image': '/static/images/news/news7.jpg'
+        'image': '/static/images/news/news7.jpg',
+        'link': 'https://www.facebook.com/cipherpublication/posts/pfbid0fSdrfkPWB4idqxVojzqZ1JPhpWj6T3YoZbAUyJDeR88gSGMwUCFbqipywFKETDjyl'
     },
     {
         'title': "𝗧𝗵𝗲 𝟯𝗿𝗱 𝗣𝗿𝗲𝘀𝗶𝗱𝗲𝗻𝘁’𝘀 𝗖𝘂𝗽 𝗵𝗮𝘀 𝗯𝗲𝗴𝘂𝗻!🎉",
         'date': '2025-10-13',
         'summary': 'Cluster 3—CCIT x CIT—kicked off the 3rd President’s Cup 2025 with a spirited parade, marking the start of a united march toward new challenges, triumphs, and campus pride.',
-        'image': '/static/images/news/news6.jpg'
+        'image': '/static/images/news/news6.jpg',
+        'link': 'https://www.facebook.com/cipherpublication/posts/pfbid0JdY6XfJYudEmGjANGjQeeawuCfzbS29ijfAM9dnATpnGEETEdiUSwfiJvMHNrhyCl'
     },
     {
         'title': "Happy Teachers' Day!",
         'date': '2025-10-04',
         'summary': 'CCIT students honor their faculty on Teachers’ Day, celebrating the mentors whose dedication and wisdom continue to shape future innovators and leaders....',
-        'image': '/static/images/news/news5.jpg'
+        'image': '/static/images/news/news5.jpg',
+        'link': ''
     },
     {
         'title': '3rd President’s Cup 2025: Tryouts',
         'date': '2025-09-21',
         'summary': 'The 3rd President’s Cup 2025 kicks off with tryouts from September 23–25, rallying students to compete across 12 sports and earn the honor of representing their college...',
-        'image': '/static/images/news/news4.jpg'
+        'image': '/static/images/news/news4.jpg',
+        'link': 'https://www.facebook.com/cipherpublication/posts/pfbid0BPWqhSESEhxbgXurgM76oYHinexQouJnPcuJSdEDVBaoo3z9Uj1okTjdm9zab4iQl'
     },
     {
         'title': '𝟏𝟏𝟖𝐭𝐡 𝐁𝐢𝐫𝐭𝐡 𝐀𝐧𝐧𝐢𝐯𝐞𝐫𝐬𝐚𝐫𝐲 𝐨𝐟 𝐏𝐫𝐞𝐬𝐢𝐝𝐞𝐧𝐭 𝐑𝐚𝐦𝐨𝐧 𝐌𝐚𝐠𝐬𝐚𝐲𝐬𝐚𝐲',
         'date': '2025-08-31',
         'summary': 'Known as the “𝐂𝐡𝐚𝐦𝐩𝐢𝐨𝐧 𝐨𝐟 𝐭𝐡𝐞 𝐌𝐚𝐬𝐬𝐞𝐬,” President Magsaysay’s legacy of humility, integrity, and dedication to public service continued to inspire generations of Filipinos. His leadership reminded us that true governance is rooted in service to the people..',
-        'image': '/static/images/news/news0.jpg'
+        'image': '/static/images/news/news0.jpg',
+        'link': 'https://www.facebook.com/prmsumain.ccit.sbo/posts/pfbid02dCtnRks5qkVqxZM2xBk6MFtnXTepcvZM4AyGSVvgSws6wQWKQ7GRXXy4sHkPEMsBl'
     },
     {
         'title': '𝐂𝐂𝐈𝐓-𝐒𝐁𝐎 𝐎𝐚𝐭𝐡-𝐓𝐚𝐤𝐢𝐧𝐠 & 𝐂𝐁𝐋 𝐑𝐞𝐯𝐢𝐬𝐢𝐨𝐧 𝟐𝟎𝟐𝟓–𝟐𝟎𝟐𝟔',
         'date': '2025-08-22',
         'summary': 'On August 20, 2025, the newly elected officers of the College of Communication and Information Technology - Student Body Organization (CCIT-SBO) convened for their first official meeting of the academic year.',
-        'image': '/static/images/news/news1.jpg'
+        'image': '/static/images/news/news1.jpg',
+        'link': 'https://www.facebook.com/prmsumain.ccit.sbo/posts/pfbid0o1fJyi4c4QE8LRu75HHE8TBVxvopL2hK341iC3jnZSzJDvwuvqpeVWumh4cRpFcJl'
     },
     {
         'title': '𝐈𝐧𝐭𝐫𝐨𝐝𝐮𝐜𝐢𝐧𝐠 𝐭𝐡𝐞 𝐍𝐞𝐰𝐥𝐲 𝐄𝐥𝐞𝐜𝐭𝐞𝐝 𝐂𝐂𝐈𝐓-𝐒𝐁𝐎 𝐎𝐟𝐟𝐢𝐜𝐞𝐫𝐬',
         'date': '2025-08-18',
         'summary': '𝐈𝐧𝐭𝐫𝐨𝐝𝐮𝐜𝐢𝐧𝐠 𝐭𝐡𝐞 𝐍𝐞𝐰𝐥𝐲 𝐄𝐥𝐞𝐜𝐭𝐞𝐝 𝐂𝐂𝐈𝐓-𝐒𝐁𝐎 𝐎𝐟𝐟𝐢𝐜𝐞𝐫𝐬 for this academic year 2025-2025.',
-        'image': '/static/images/news/news2.jpg'
+        'image': '/static/images/news/news2.jpg',
+        'link': 'https://www.facebook.com/prmsumain.ccit.sbo/posts/pfbid0o1fJyi4c4QE8LRu75HHE8TBVxvopL2hK341iC3jnZSzJDvwuvqpeVWumh4cRpFcJl'
     },
     {
         'title': 'CCIT Student Body Organization Election',
         'date': '2025-08-08',
         'summary': 'CCIT Student Body Organization conducted the election of officers for this academic year.',
-        'image': '/static/images/news/news3.jpg'
+        'image': '/static/images/news/news3.jpg',
+        'link': 'https://www.facebook.com/prmsumain.ccit.sbo/posts/pfbid0Bg7dtExBMBFjGA5WWPiXeyA7ZoNe3XrDT54KrXQooiLGYQFAdWqmxdoS7npdskral'
     }
 ]
 
