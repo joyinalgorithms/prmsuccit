@@ -61,7 +61,7 @@ organizations_data = [
         'description': 'The DIGITS is a group specifically for students taking up a Bachelor of Science in Information Technology (BSIT) at PRMSU.',
         'link': '/organizations/digits',
         'page':'https://www.facebook.com/prmsu.ccit.digits'
-    }
+    },
     {
         'name': 'The Cipher - CCIT Publication',
         'image': '/static/images/cipher.jpg',
